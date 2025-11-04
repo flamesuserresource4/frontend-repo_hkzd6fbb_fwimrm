@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
-import { Rocket, Mail } from 'lucide-react';
+import { Rocket, Mail, Sun, Moon } from 'lucide-react';
 
-export default function Navbar() {
+export default function Navbar({ theme = 'light', onToggleTheme }) {
   const navItems = [
     { name: 'Work', href: '#work' },
-    { name: 'Stack', href: '#stack' },
+    { name: 'Skills', href: '#skills' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -23,7 +23,7 @@ export default function Navbar() {
             <span>Premium Portfolio</span>
           </motion.a>
 
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-2 md:gap-4">
             <ul className="hidden md:flex items-center gap-6 text-sm font-medium text-neutral-600 dark:text-neutral-300">
               {navItems.map((item, i) => (
                 <motion.li
@@ -41,6 +41,15 @@ export default function Navbar() {
                 </motion.li>
               ))}
             </ul>
+
+            <button
+              type="button"
+              aria-label="Toggle theme"
+              onClick={onToggleTheme}
+              className="inline-flex items-center justify-center rounded-full border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/60 px-3 py-2 text-neutral-800 dark:text-neutral-200 hover:bg-neutral-50 dark:hover:bg-neutral-800/60 transition"
+            >
+              {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+            </button>
 
             <motion.a
               href="#contact"

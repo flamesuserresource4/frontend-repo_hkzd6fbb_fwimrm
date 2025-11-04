@@ -82,7 +82,7 @@ export default function Hero() {
           <div className="relative h-[55vh] md:h-[60vh] lg:h-[70vh] order-1 lg:order-2">
             <div className="absolute inset-0 rounded-3xl overflow-hidden border border-neutral-200/60 dark:border-neutral-800 shadow-xl">
               <Spline
-                scene="https://prod.spline.design/VJLoxp84lCdVfdZu/scene.splinecode"
+                scene="https://prod.spline.design/S4k-6fqjuV5AuVZe/scene.splinecode"
                 style={{ width: '100%', height: '100%' }}
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent dark:from-neutral-950/50" />
